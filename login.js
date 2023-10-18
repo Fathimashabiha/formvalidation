@@ -1,5 +1,5 @@
 const form = document.querySelector('#form')
-const username = document.querySelector('#username')
+
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 
@@ -13,21 +13,16 @@ form.addEventListener('submit',(e)=>{
 })
 
 function validateInputs(){
-    const usernameVal = username.value.trim()
+   
     const emailVal = email.value.trim()
     const passwordVal = password.value.trim()
     
     let success=true
     
 
-     if(usernameVal===''){
-        success=false
-        setError(username,'Username is required')
-     }
-     else
-       setSuccess(username)
+     
     
-    if(usernameVal===''){
+    if(emailVal===''){
         success=false
         setError(email,'Email is required')
         }
@@ -77,8 +72,3 @@ const validateEmail = (email) => {
         /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
     );
 }
-
-const logoutBtn = document.querySelector(".logout-btn")
-logoutBtn.addEventListener("click",()=>{
-    window.location.replace("login.html")
-})

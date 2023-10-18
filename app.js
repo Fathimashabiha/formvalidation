@@ -28,7 +28,7 @@ function validateInputs(){
      else
        setSuccess(username)
     
-    if(usernameVal===''){
+    if(emailVal===''){
         success=false
         setError(email,'Email is required')
         }
